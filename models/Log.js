@@ -1,0 +1,24 @@
+const mongoose = require('mongoose');
+
+const logSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true
+  },
+  entry: {
+    type: String,
+    required: true
+  },
+  shipIsBroken: {
+    type: Boolean,
+    default: false
+  }
+}, { timestamps: true });
+
+logSchema.statics.findBroken = function () {
+  return this.find({ shipIsBroken: true });
+};
+
+const Log = mongoose.model('Log', logSchema);
+
+module.exports = Log;

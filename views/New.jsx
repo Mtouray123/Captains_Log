@@ -8,14 +8,14 @@ function New() {
 
             <form action='/logs' method='POST'>
 
-                Title: <input type="text" name="Title"/>
+                Title: <input type="text" name="title"/>
                 <br/>
 
-                Entry: <input type="textarea" name="Entry"/>
+                Entry: <input type="textarea" name="entry"/>
                 <br/>
 
                 ShipIsBroken: <input type='checkbox'
-                name="ShipIsBroken"
+                name="shipIsBroken" value="true"
                 />
                 <br/>
 
