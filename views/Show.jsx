@@ -2,7 +2,7 @@ const React = require('react');
 
 function Show(props) {
   return (
-    <DefaultLayout title={props.log.title}>
+   <>
       <h2>{props.log.title}</h2>
       <p>{props.log.entry}</p>
       <p>Ship is {props.log.shipIsBroken ? 'broken' : 'not broken'}</p>
@@ -11,7 +11,7 @@ function Show(props) {
       <form action={`/logs/${props.log._id}?_method=DELETE`} method="POST">
         <input type="submit" value="Delete"/>
       </form>
-    </DefaultLayout>
+    </>
   );
 }
 

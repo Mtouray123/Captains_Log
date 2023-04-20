@@ -64,6 +64,7 @@ app.get('/logs/:id', (req, res) => {
 app.get('/logs/:id/edit', (req, res) => {
     const foundLog = logs[req.params.id]
     res.render('Edit', {log: foundLog})
+    console.log(foundLog);
 })
 
 // Update Route - updates a specific log by ID
